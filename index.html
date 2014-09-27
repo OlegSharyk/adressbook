@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AdressBook</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/adressbook.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="adressbook jsAdressbook line">
+            <div class="form__add">
+                <a class="form__add-close jsFormAddClose" href="#"></a>
+                <div class="form__add-in">
+                    <form class="jsForm jsValidateForm">
+                        <fieldset>
+                            <input class="jsId" type="hidden" value="" />
+                            <h3>New Contact</h3>
+                            <dl class="form__el">
+                                <dt>Name</dt>
+                                <dd>
+                                    <div class="b-input-i">
+                                        <input name="name" type="text" value="" class="b-input jsName" data-required="required" />
+                                        <span class="form__error">Input name please</span>
+                                    </div>
+                                </dd>
+                                <dt>Surname</dt>
+                                <dd>
+                                    <div class="b-input-i">
+                                        <input name="surname" type="text" value="" class="b-input jsSurname" data-required="required" />
+                                        <span class="form__error">Input surname please</span>
+                                    </div>
+                                </dd>
+                                <dt>Phone</dt>
+                                <dd>
+                                    <div class="b-input-i">
+                                        <input name="phone" type="text" value="" class="b-input jsPhone" data-required="required" />
+                                        <span class="form__error">Input phone number please</span>
+                                    </div>
+                                </dd>
+                                <dt>Email</dt>
+                                <dd>
+                                    <div class="b-input-i">
+                                        <input type="text" name="email" value="" class="b-input jsEmail" data-required="required" />
+                                        <span class="form__error">Input email please</span>
+                                    </div>
+                                </dd>
+                                <dt>Group</dt>
+                                <dd>
+                                    <div class="b-input-i">
+                                        <input type="text" name="group" value="" class="b-input jsGroup" />
+                                    </div>
+                                </dd>
+                            </dl>
+                            <input class="btn__save jsSaveBtn" type="submit" value="save" />
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="adressbook__left">
+                <div class="form">
+                    <div id="search" class="adressbook__search">
+                        <div class="b-input-i">
+                            <span class="form__error">no result</span>
+                            <a class="btn_search jsBtnSearch" href="#"></a>
+                            <input class="b-input jsSearchInput" type="text" />
+                        </div>
+                    </div>
+                    <div class="adressbook__options">
+                        <select class="b-select jsGroupsSelect">
+                            <option value="" class="default">All Contacts</option>
+                        </select>
+                    </div>
+                    <div class="adressbook__persons">
+                        <ul id="contactList" class="listing"></ul>
+                    </div>
+                    <div class="adressbook__btm">
+                        <a href="#" class="btn btn_add jsAddBtn">Add</a>
+                        <a href="#" class="btn btn_remove jsRemoveBtn">Remove</a>
+                        <a href="#" class="btn btn_edit jsEditBtn">Edit</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="adressbook__right">
+                <div id="person" class="person">
+                    <div class="person__top">
+                        <div class="person__photo">
+                            <div class="person__img">
+
+                            </div>
+                        </div>
+                        <div class="person__txt">
+                            <h2 class="jsPersonName">Afrodisie Polanco Loya</h2>
+                        </div>
+                    </div>
+                    <dl class="person__info">
+                        <dt>Email</dt>
+                        <dd><a class="jsPersonEmail" href="mailto:shjdsjk@mail.ru">shjdsjk@mail.ru</a></dd>
+                        <dt>phone</dt>
+                        <dd class="jsPersonPhone">+380684401313</dd>
+                        <dt>group</dt>
+                        <dd class="jsPersonGroup"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,448 @@
+/*
+----------------------------------------------------------------------------------------------------
+[Table of Contents]
+
+1. Base page configuration
+2. Elements of interface, Global classes and other blocks
+3. Layouts
+   3.1 Base layout
+4. Blocks
+   4.1 blockName                       		  | .className
+
+----------------------------------------------------------------------------------------------------
+*/
+
+
+/*
+####################################################################################################
+[1. Base page configuration]
+####################################################################################################
+*/
+
+body,div,dl,dt,dd,ul,ol,li,form,table,tr,td,
+h1,h2,h3,h4,h5,h6,pre,p,span,b,i,
+input,textarea, fieldset { margin:0; padding:0;}
+
+ul { list-style-type:none;}
+img, fieldset { border:none;}
+table { border-collapse:collapse; border-spacing:0;}
+
+h1,h2,h3,h4,h5,h6 { font-weight:normal;}
+
+html,
+body {
+	height:100%;
+}
+body { 
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+	line-height: 16px;
+    color:#000;
+    background:#fff;
+}
+
+input, textarea, select, label { font-size:1em; font-family:inherit;}
+input[type="submit"] { cursor:pointer;}
+
+a { 
+    color:#1e98ca;
+    -webkit-transition:color .3s ease;
+    -moz-transition:color .3s ease;
+    -ms-transition:color .3s ease;
+    -o-transition:color .3s ease;
+    transition:color .3s ease;
+	text-decoration:none;
+}
+a:hover {
+
+}
+
+/* ===== [ link-preset ] ===== */
+
+.b-link { display:inline-block; vertical-align:top; text-decoration:none;}
+    .b-link__inner { line-height:1.2; text-decoration:none; border-bottom:1px solid;}
+
+a.b-link:hover { }
+
+.b-link_pseudo { }
+    .b-link_pseudo .b-link__inner { border-bottom:1px dotted;}
+
+/*
+####################################################################################################
+[2. Elements of interface, Global classes and other blocks]
+####################################################################################################
+*/
+
+.g-clear { clear:both;}
+.g-right { float:right !important;}
+.g-left { float:left !important;}
+
+.g-black { color:#000 !important;}
+.g-red { color:#c00 !important;}
+
+.g-hidden { display:none !important;}
+
+.line { overflow:visible;}
+
+.line:after { 
+    font-size:0;
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+
+/* ###########################################################################
+    [3. Layouts]
+########################################################################### */
+
+.wrap {
+	position:relative;
+	width: 100%;
+}
+
+.case {
+	width:1000px;
+	margin:0 auto;
+}
+
+/* header */
+.hdr {
+
+}
+
+/* content */
+.cnt {
+
+}
+
+
+/* footer */
+.ftr { 
+    position:relative;
+}
+
+/* ###########################################################################
+    [4. Blocks]
+########################################################################### */
+
+/*---------------------------------------------------------------------------
+    [4.1 Icons]
+---------------------------------------------------------------------------*/
+
+.ico {
+	display:inline-block;
+	/*background:url(../img/ico.png) no-repeat;*/
+}
+
+.ico_someicon {
+	height:16px;
+	width:15px;
+}
+
+
+/*---------------------------------------------------------------------------
+    [4.2 Buttons]
+---------------------------------------------------------------------------*/
+
+.btn { 
+    position:relative;
+    display:inline-block;
+    vertical-align:top;
+}
+a.btn:hover { }
+a.btn:active { }
+
+
+/*---------------------------------------------------------------------------
+    [4.3 Forms]
+---------------------------------------------------------------------------*/
+
+.b-input-i {
+	position:relative;
+	width: 100%;
+}
+.b-input-i_error .b-input {
+	border-color: #cc0000;
+}
+
+.b-input {
+	font-size: 14px;
+	line-height: 17px;
+	padding: 5px 13px;
+	margin: 0;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none;
+	border:1px solid #ccc;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.b-ta {}
+.form__error {
+	position: absolute;
+	right: -500px;
+	bottom: -15px;
+	font-size: 11px;
+	line-height: 13px;
+	font-family: Verdana, Arial, sans-serif;
+	color: #cc0000;
+	z-index: 1;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.b-input-i_error .form__error {
+	right: 0;
+}
+.adressbook__search .b-input-i {
+	overflow: hidden;
+}
+.adressbook__search .form__error {
+	right: 30px;
+	bottom: -35px;
+	color: #1e98ca;
+	/*background: #fff;*/
+	padding: 8px 5px;
+}
+.adressbook__search .no-result .form__error {
+	bottom: 1px;
+}
+
+/*---------------------------------------------------------------------------
+    [4.4 Elements]
+---------------------------------------------------------------------------*/
+
+
+.wrap {
+	width: 1000px;
+	margin: 0 auto;
+    padding: 0 0 200px;
+}
+.adressbook {
+	height: 650px;
+	border:1px solid #ccc;
+	position: relative;
+}
+.adressbook__left {
+	float: left;
+	width: 30%;
+	background: #e4e4e4;
+	height: 100%;
+	position: relative;
+	z-index: 2;
+}
+
+.adressbook__right {
+	float: right;
+	width: 70%;
+	background: #bcdce7;
+	height: 100%;
+}
+.adressbook__search {
+	margin: 0 0 10px;
+}
+.adressbook__search .b-input {
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: #999;
+	background: #fff;
+	padding: 5px 35px 5px 10px;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0;
+}
+.adressbook__search .no-result .b-input {
+	border-color: #1e98ca;
+}
+.btn_search {
+	position: absolute;
+	z-index: 5;
+	width: 22px;
+	height: 22px;
+	right:3px;
+	top: 5px;
+	background: url(../img/search.png) no-repeat;
+}
+.btn_search:hover {
+	background: url(../img/search-g.png) no-repeat;
+}
+.person {
+	padding: 10px;
+}
+.person__top {
+	background: #1e98ca;
+	padding: 15px;
+	overflow: hidden;
+	margin: 0 0 15px;
+}
+.person__photo {
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 0 10px 0 0;
+}
+.person__img {
+	display: block;
+	background: #ccc;
+	border:6px solid #fff;
+	width: 88px;
+	height: 88px;
+}
+.person__txt {
+	overflow: hidden;
+	color: #fff;
+}
+.person__txt h2 {
+	font-size: 20px;
+	line-height: 24px;
+}
+.person__info {
+	padding: 0 18px;
+}
+.person__info dt {
+	float: left;
+	width: 120px;
+	color: #666;
+}
+.person__info dd {
+	overflow: hidden;
+	padding: 0 0 15px;
+	color: #333;
+}
+
+.adressbook .form {
+   padding: 10px 0;
+}
+.adressbook select {
+	width: 100%;
+}
+.adressbook__persons {
+	overflow: auto;
+	height: 400px;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: #999;
+}
+.listing {
+	font-size: 15px;
+	line-height: 20px;
+}
+.listing li {
+	padding: 8px 10px;
+    cursor: pointer;
+	background: #fff;
+}
+.listing .active {
+    background: #ccc;
+}
+
+.form__el {
+
+}
+.form__el dt {
+    float: left;
+    margin: 5px 10px 0 0;
+    width: 150px;
+    text-align: right;
+}
+.form__el dd {
+    overflow: hidden;
+    padding: 0 0 25px
+}
+.adressbook__btm {
+	padding: 5px;
+	text-align: center;
+}
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	line-height: 16px;
+	margin: 0 5px;
+	background: #fff;
+	border:1px solid #999;
+	padding: 8px 18px;
+	border-radius: 5px;
+	color: #333;
+}
+
+
+.form__add {
+	height: 100%;
+	width: 0;
+	position: absolute;
+	z-index: 1;
+	left:0;
+	top:-1px;
+	background: #fff;
+	border:1px solid #ccc;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	opacity: 0;
+}
+.form__add-close {
+	position: absolute;
+	right: 15px;
+	top:15px;
+	z-index: 3;
+	width: 19px;
+	height: 19px;
+	background: url(../img/close.png) no-repeat;
+}
+.form__add-close:hover {
+	background-position: 0 -19px;
+}
+.edit-open .form__add  {
+	left:299px;
+	width: 699px;
+	opacity: 1;
+}
+.form__add-in {
+	padding: 20px;
+}
+.form__add h3 {
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: bold;
+	margin: 0 0 30px;
+}
+.btn__save {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	line-height: 16px;
+	margin: 0 5px;
+	background: #cecece;
+	border:1px solid #999;
+	padding: 8px 18px;
+	border-radius: 5px;
+	color: #333;
+}
+
+
+
+
+
+
+
+/* ####################################################################################################
+[5 Jquery/javascript plugins]
+#################################################################################################### */
+/*---------------------------------------------------------------------------
+    [5.1 PIE behavior for IE6-9 ]
+---------------------------------------------------------------------------*/
+
+.btn { behavior:url('css/PIE.htc');}
