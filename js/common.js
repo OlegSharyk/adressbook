@@ -27,7 +27,7 @@ function initContactList() {
 
     contactListElement.find('li:first').addClass('active');
     renderContact(contactList[0]);
-};
+}
 
 function initGroupList() {
     for (var i = 0; (i < contactList.length); i++) {
@@ -53,7 +53,6 @@ function updateGroupList(group) {
 	}
 }
 
-
 function appendContact(contact, isActive) {
     var element = $('<li data-id="' + contact.id + '" >' + contact.name + ' ' + contact.surname + '</li>');
     if (isActive) {
@@ -62,7 +61,6 @@ function appendContact(contact, isActive) {
     }
     contactListElement.append(element);
 }
-
 
 function updateContact(contact) {
     contactListElement.find('li[data-id=' + contact.id + ']').text(contact.name + ' ' + contact.surname);
@@ -82,7 +80,6 @@ function renderContact(contact) {
     email.text(contact.email);
     group.text(contact.group);
 }
-
 
 function validateForm() {
     var isValidate = false;
@@ -232,7 +229,7 @@ $(function () {
 			}
 			renderContact(contact);
 			contactForm.reset();
-//		    updateGroupList(contact.group);
+		    updateGroupList(contact.group);
             refreshContactsList ();
 			$('.jsAdressbook').removeClass('edit-open');
 		} 

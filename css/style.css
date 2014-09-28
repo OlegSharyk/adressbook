@@ -117,7 +117,6 @@ a.b-link:hover { }
 
 }
 
-
 /* footer */
 .ftr { 
     position:relative;
@@ -140,7 +139,6 @@ a.b-link:hover { }
 	height:16px;
 	width:15px;
 }
-
 
 /*---------------------------------------------------------------------------
     [4.2 Buttons]
@@ -222,7 +220,6 @@ a.btn:active { }
     [4.4 Elements]
 ---------------------------------------------------------------------------*/
 
-
 .wrap {
 	width: 1000px;
 	margin: 0 auto;
@@ -241,7 +238,6 @@ a.btn:active { }
 	position: relative;
 	z-index: 2;
 }
-
 .adressbook__right {
 	float: right;
 	width: 70%;
@@ -319,7 +315,6 @@ a.btn:active { }
 	padding: 0 0 15px;
 	color: #333;
 }
-
 .adressbook .form {
    padding: 10px 0;
 }
@@ -345,7 +340,6 @@ a.btn:active { }
 .listing .active {
     background: #ccc;
 }
-
 .form__el {
 
 }
@@ -375,8 +369,6 @@ a.btn:active { }
 	border-radius: 5px;
 	color: #333;
 }
-
-
 .form__add {
 	height: 100%;
 	width: 0;
@@ -431,11 +423,6 @@ a.btn:active { }
 	border-radius: 5px;
 	color: #333;
 }
-
-
-
-
-
 
 
 /* ####################################################################################################
